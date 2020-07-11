@@ -73,8 +73,14 @@ mysql> drop user dbuser01@localhost;
 
 ▶05 外部ファイルのコマンドを実行しよう
 
+1．リダイレクションを使用
 [vagrant@localhost mysql_lessons]$ mysql -u root < create_myapp.sql
 [vagrant@localhost mysql_lessons]$ mysql -u myapp_user -p myapp
 mysql> quit;
+
+2．mysqlサーバーにログインした状態で実行
 [vagrant@localhost mysql_lessons]$ mysql -u root
 mysql> \. ./create_myapp.sql
+(mysql> source ./create.myapp.sql)
+
+
